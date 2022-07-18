@@ -2,10 +2,13 @@ const express = require('express')
 const mongoose = require('mongoose')
 const app = express(); 
 const router = require('./routes/book-routes')
+const cors =  require('cors')
+
 // const bodyParser = require('body-parser');
 //middlewares
-
+app.use(cors())
 app.use(express.json())
+app.use(express.urlencoded({extended: true}))
 // app.use(express.urlencoded({extended: true}))
 // app.use(bodyParser.json());
 app.use('/books',router) // localhost:5000/books

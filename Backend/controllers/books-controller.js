@@ -9,10 +9,10 @@ const  getAllBooks = async (req, res, next) =>{
     }
    
     if(!books){
-        return res.json({message:"No book Found"})
+        return res.send({message:"No book Found"})
     }
 
-        return res.json({books})
+        return res.send(books)
 
 
 }
@@ -27,9 +27,9 @@ const getBookById = async(req, res, next) =>{
     }
 
     if(!book){
-        return res.json({message:"book not found"})
+        return res.send({message:"book not found"})
     }
-    return res.json({book})
+    return res.send(book)
 } 
 const updateBook = async(req, res, next) => {
     const id = req.params.id
@@ -50,9 +50,9 @@ const updateBook = async(req, res, next) => {
     }
 
     if(!book){
-        return res.json({message:"unable to update"})
+        return res.send({message:"unable to update"})
     }
-        return res.json({book})
+        return res.send({book})
 
 }
 
@@ -77,10 +77,10 @@ const addBook = async(req, res, next) => {
 
 
     if(!book){
-        return res.json({message:"unable to add "})
+        return res.send({message:"unable to add "})
     }
 
-    return res.json({book})
+    return res.send(book)
 
 
 }
@@ -97,9 +97,9 @@ const deleteBook = async(req, res, next) => {
     }
 
     if(!book){
-        return res.json({message:"unable to delete"})
+        return res.send({message:"unable to delete"})
     }
-        return res.json({book})
+        return res.send(book)
 
 }
 

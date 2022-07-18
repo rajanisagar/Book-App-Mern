@@ -1,0 +1,26 @@
+ul{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content:center ;
+    flex-wrap: wrap;
+}
+li{
+    padding:10px;
+    width: 250px;
+    max-width: 250px;
+    max-height: 400px;
+}
+.card{
+    margin:auto;
+    padding: 1rem;
+    width: 250px;
+    height: 100;
+    box-shadow: 5px 5px 10px #ccc;
+    align-items: center;
+}
+.card > img{
+    width: 100%;
+    height: 50%;
+
+}
